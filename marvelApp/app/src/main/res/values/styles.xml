@@ -1,0 +1,32 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.Card.Media" parent="">
+        <item name="cornerSizeBottomLeft">20dp</item>
+        <item name="cornerSizeBottomRight">20dp</item>
+    </style>
+
+    <!-- Alert Dialog -->
+    <style name="MyThemeOverlay.MaterialComponents.MaterialAlertDialog" parent="@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+        <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+        <item name="buttonBarNeutralButtonStyle">@style/NeutralButtonStyle</item>
+    </style>
+
+
+    <style name="PositiveButtonStyle" parent="@style/Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+    <style name="NegativeButtonStyle" parent="@style/Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+    <style name="NeutralButtonStyle" parent="@style/Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+</resources>

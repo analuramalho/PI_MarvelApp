@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".quiz.view.QuizStartActivity"
+    android:background="@drawable/spider_quiz"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/quizStartToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_black"
+        android:minHeight="?attr/actionBarSize"
+        android:padding="@dimen/dimen_10dp"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgBackQuiz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                android:contentDescription="@string/back"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/color_white" />
+
+            <ImageView
+                android:layout_width="@dimen/dimen_100dp"
+                android:layout_height="@dimen/dimen_50dp"
+                android:contentDescription="@string/marvel_logo"
+                android:src="@drawable/marvel_logo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <TextView
+        android:id="@+id/tv_app_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/quiz"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/dim_25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quizStartToolbar" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="@dimen/dimen_300dp"
+        android:layout_height="@dimen/dimen_220dp"
+        android:layout_marginBottom="@dimen/dimen_150dp"
+        android:background="@color/color_white"
+        app:cardCornerRadius="@dimen/dimen_8dp"
+        app:cardMaxElevation="@dimen/dimen_5dp"
+        app:layout_constraintBottom_toTopOf="@+id/quizStartBottomNav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen_16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/quiz_start_message"
+                android:textColor="@color/color_gray_dark"
+                android:textSize="@dimen/dim_25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:gravity="center"
+                android:text="@string/quiz_start_message_2"
+                android:textColor="@color/color_gray_dark"
+                android:textSize="@dimen/dimen_20sp"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/btnStartQuiz"
+                android:layout_width="@dimen/dimen_200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:backgroundTint="@color/color_black"
+                android:text="@string/start">
+
+            </Button>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/quizStartBottomNav"
+        style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_navigation_menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

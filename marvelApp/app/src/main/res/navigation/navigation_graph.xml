@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/seriesListFragment"
+        android:name="com.marvelapp06.marvelapp.series.view.SeriesListFragment"
+        android:label="fragment_series_list"
+        tools:layout="@layout/fragment_series_list" >
+        <action
+            android:id="@+id/action_seriesListFragment_to_seriesFragment"
+            app:destination="@id/seriesFragment" />
+        <action
+            android:id="@+id/action_seriesListFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/seriesFragment"
+        android:name="com.marvelapp06.marvelapp.series.view.SeriesFragment"
+        android:label="fragment_series"
+        tools:layout="@layout/fragment_series" >
+        <action
+            android:id="@+id/action_seriesFragment_to_seriesListFragment"
+            app:destination="@id/seriesListFragment"
+            app:popUpTo="@id/seriesListFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_seriesFragment_to_fullscreenImageFragment"
+            app:destination="@id/fullscreenImageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/characterListFragment"
+        android:name="com.marvelapp06.marvelapp.character.view.CharacterListFragment"
+        android:label="fragment_character_list"
+        tools:layout="@layout/fragment_character_list" >
+        <action
+            android:id="@+id/action_characterListFragment_to_characterFragment"
+            app:destination="@id/characterFragment" />
+        <action
+            android:id="@+id/action_characterListFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.marvelapp06.marvelapp.home.view.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_seriesListFragment"
+            app:destination="@id/seriesListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_searchComicFragment"
+            app:destination="@id/searchComicFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_characterListFragment"
+            app:destination="@id/characterListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_creatorsListFragment"
+            app:destination="@id/creatorsListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_favoriteFragment"
+            app:destination="@id/favoriteFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_quizStartFragment2"
+            app:destination="@id/quizStartFragment2" />
+        <action
+            android:id="@+id/action_homeFragment_to_noInternetFragment"
+            app:destination="@id/noInternetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchComicFragment"
+        android:name="com.marvelapp06.marvelapp.comic.view.SearchComicFragment"
+        android:label="fragment_search_comic"
+        tools:layout="@layout/fragment_search_comic" >
+        <action
+            android:id="@+id/action_searchComicFragment_to_comicFragment"
+            app:destination="@id/comicFragment" />
+        <action
+            android:id="@+id/action_searchComicFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/comicFragment"
+        android:name="com.marvelapp06.marvelapp.comic.view.ComicFragment"
+        android:label="fragment_comic"
+        tools:layout="@layout/fragment_comic" >
+        <action
+            android:id="@+id/action_comicFragment_to_searchComicFragment"
+            app:destination="@id/searchComicFragment"
+            app:popUpTo="@id/searchComicFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_comicFragment_to_fullscreenImageFragment"
+            app:destination="@id/fullscreenImageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/characterFragment"
+        android:name="com.marvelapp06.marvelapp.character.view.CharacterFragment"
+        android:label="fragment_character"
+        tools:layout="@layout/fragment_character" >
+        <action
+            android:id="@+id/action_characterFragment_to_characterListFragment"
+            app:destination="@id/characterListFragment" />
+        <action
+            android:id="@+id/action_characterFragment_to_fullscreenImageFragment"
+            app:destination="@id/fullscreenImageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/creatorsListFragment"
+        android:name="com.marvelapp06.marvelapp.creator.view.CreatorsListFragment"
+        android:label="fragment_creators_list"
+        tools:layout="@layout/fragment_creators_list" >
+        <action
+            android:id="@+id/action_creatorsListFragment_to_creatorsFragment"
+            app:destination="@id/creatorsFragment" />
+        <action
+            android:id="@+id/action_creatorsListFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/creatorsFragment"
+        android:name="com.marvelapp06.marvelapp.creator.view.CreatorsFragment"
+        android:label="fragment_creators"
+        tools:layout="@layout/fragment_creators" >
+        <action
+            android:id="@+id/action_creatorsFragment_to_creatorsListFragment"
+            app:destination="@id/creatorsListFragment"
+            app:popUpTo="@id/creatorsListFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_creatorsFragment_to_fullscreenImageFragment"
+            app:destination="@id/fullscreenImageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.marvelapp06.marvelapp.favorite.view.FavoriteFragment"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite" />
+    <fragment
+        android:id="@+id/quizStartFragment2"
+        android:name="com.marvelapp06.marvelapp.quiz.QuizStartFragment"
+        android:label="fragment_quiz_start"
+        tools:layout="@layout/fragment_quiz_start" >
+        <action
+            android:id="@+id/action_quizStartFragment2_to_quizQuestionFragment2"
+            app:destination="@id/quizQuestionFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizQuestionFragment2"
+        android:name="com.marvelapp06.marvelapp.quiz.QuizQuestionFragment"
+        android:label="fragment_quiz_question"
+        tools:layout="@layout/fragment_quiz_question" >
+        <action
+            android:id="@+id/action_quizQuestionFragment2_self"
+            app:destination="@id/quizQuestionFragment2" />
+        <action
+            android:id="@+id/action_quizQuestionFragment2_to_quizResultFragment2"
+            app:destination="@id/quizResultFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizResultFragment2"
+        android:name="com.marvelapp06.marvelapp.quiz.QuizResultFragment"
+        android:label="fragment_quiz_result"
+        tools:layout="@layout/fragment_quiz_result" />
+    <fragment
+        android:id="@+id/noInternetFragment"
+        android:name="com.marvelapp06.marvelapp.network.view.NoInternetFragment"
+        android:label="fragment_no_internet"
+        tools:layout="@layout/fragment_no_internet" >
+        <action
+            android:id="@+id/action_noInternetFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/fullscreenImageFragment"
+        android:name="com.marvelapp06.marvelapp.fullscreen.view.FullscreenImageFragment"
+        android:label="fragment_fullscreen_image"
+        tools:layout="@layout/fragment_fullscreen_image" />
+
+</navigation>

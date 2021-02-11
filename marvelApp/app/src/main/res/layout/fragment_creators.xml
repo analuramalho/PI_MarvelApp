@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".creator.view.CreatorsFragment"
+    android:background="@color/color_gray_dark">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarCreatorsDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_black"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        android:padding="@dimen/dimen_10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imgCreatorsDetailsBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/back"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:tint="@color/color_white" />
+
+            <ImageView
+                android:layout_width="@dimen/dimen_100dp"
+                android:layout_height="@dimen/dimen_50dp"
+                android:contentDescription="@string/marvel_logo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/marvel_logo"/>
+
+            <ImageView
+                android:id="@+id/imgCreatorsDetailsShare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@id/imgCreatorsDetailsFavorite"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginEnd="@dimen/dimen_20dp"
+                android:src="@drawable/ic_baseline_share_24"
+                android:contentDescription="@string/share_icon"
+                app:tint="@color/color_white" />
+
+            <ImageView
+                android:id="@+id/imgCreatorsDetailsFavorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/ic_baseline_favorite_24"
+                app:tint="@color/color_white"
+                android:contentDescription="@string/favorite_icon"
+                android:layout_marginEnd="@dimen/dimen_10dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardCreatorDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarCreatorsDetails">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_black">
+
+            <ImageView
+                android:id="@+id/imgCreatorDetails"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_200dp"
+                android:contentDescription="@string/character_image"
+                android:src="@drawable/stan_lee"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="UnknownIdInLayout" />
+
+            <TextView
+                android:id="@+id/txtFullnameCreatorsDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_10dp"
+                android:layout_marginTop="@dimen/dim_6dp"
+                android:text="@string/creators_name"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/dimen_20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgCreatorDetails" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/txtSeriesCreatorsDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_10dp"
+        android:text="@string/series_creators_chip"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/dimen_18sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/cgSeriesCreators"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txtSeriesCreatorsDetails"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="@dimen/dimen_20dp"
+        />
+
+    <TextView
+        android:id="@+id/txtComicsCreatorsDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_10dp"
+        android:text="@string/hqs_creators_chips"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/dimen_18sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/cgComicsCreators"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_20dp"
+        />
+
+    <TextView
+        android:id="@+id/txtEventsCreatorsDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_10dp"
+        android:text="@string/events_chip"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/dimen_18sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/cgEventsCreators"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_20dp"
+        />
+    </LinearLayout>
+</ScrollView>

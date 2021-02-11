@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".home.view.HomeFragment"
+    android:background="@color/color_gray_dark">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_black"
+            android:minHeight="?attr/actionBarSize"
+            android:padding="@dimen/dimen_10dp"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="@dimen/dimen_100dp"
+                    android:layout_height="@dimen/dimen_50dp"
+                    android:contentDescription="@string/marvel_logo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:src="@drawable/marvel_logo"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/crdCharacterHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbarHome"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="@dimen/dimen_10dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            app:cardCornerRadius="@dimen/dimen_20dp">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_200dp"
+                    android:src="@drawable/character_home"
+                    android:scaleType="fitXY"
+                    android:contentDescription="@string/home_characters_image"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/characters"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/dimen_22sp"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="@dimen/dimen_30dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/crdSeriesHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/crdCharacterHome"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="@dimen/dimen_10dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            app:cardCornerRadius="@dimen/dimen_20dp">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_200dp"
+                    android:src="@drawable/series_home"
+                    android:scaleType="fitXY"
+                    android:contentDescription="@string/home_series_image"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/series"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/dimen_22sp"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="@dimen/dimen_30dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/crdComicHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/crdSeriesHome"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="@dimen/dimen_10dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            app:cardCornerRadius="@dimen/dimen_20dp">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_200dp"
+                    android:src="@drawable/comic_home"
+                    android:scaleType="fitXY"
+                    android:contentDescription="@string/home_comics_image"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/comic"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/dimen_22sp"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="@dimen/dimen_30dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/crdCreatorHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_10dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            app:cardCornerRadius="@dimen/dimen_20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/crdComicHome">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_200dp"
+                    android:contentDescription="@string/home_creators_image"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/creator_home"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dimen_30dp"
+                    android:text="@string/creators"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/dimen_22sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/crdQuiz"
+            android:background="@color/color_white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/crdCreatorHome"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginHorizontal="@dimen/dimen_10dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            app:cardCornerRadius="@dimen/dimen_20dp"
+            android:layout_marginBottom="@dimen/dimen_70dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_200dp"
+                    android:contentDescription="@string/home_creators_image"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/quiz_home"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/quiz"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/dimen_22sp"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="@dimen/dimen_30dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
